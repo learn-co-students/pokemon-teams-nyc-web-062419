@@ -1,4 +1,5 @@
-import { deletePokemon } from "./api-calls.js";
+import { deletePokemon, postPokemon } from "./api-calls.js";
+import { postConfig } from "./fetchConfigs.js";
 
 export const attachAllListeners = () => {
   attachClickListener();
@@ -12,5 +13,8 @@ const attachClickListener = () =>
       e.target.parentNode.remove();
     } else if (e.target.className === "add") {
       const trainerID = e.target.dataset.trainerId;
+      const postObj = { trainer_id: trainerID };
+      const config = postConfig(postObj);
+      postPokemon(config);
     }
   });

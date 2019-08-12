@@ -1,4 +1,4 @@
-import { trainerCard } from "./templates.js";
+import { trainerCard, pokeLine } from "./templates.js";
 import { deleteConfig } from "./fetchConfigs.js";
 
 const BASE_URL = "http://localhost:3000";
@@ -18,3 +18,13 @@ const renderTrainers = json =>
 
 export const deletePokemon = id =>
   fetch(`${BASE_URL}/pokemons/${id}`, deleteConfig());
+
+export const postPokemon = config =>
+  fetch(POKEMONS_URL, config)
+    .then(resp => resp.json())
+    .then(
+      json =>
+        (document.getElementById(`t${json.trainer_id}`).innerHTML += pokeLine(
+          json
+        ))
+    );
