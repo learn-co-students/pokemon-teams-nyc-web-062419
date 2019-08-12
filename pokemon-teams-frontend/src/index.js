@@ -27,7 +27,7 @@ function trainerCardTemplate(trainer) {
 function renderPokemon(trainer) {
   return trainer.pokemons.map(pokemonTemplate).join("");
 }
-
+// hello
 trainerCards.addEventListener("click", e => {
   if (e.target.nodeName === "BUTTON" && e.target.innerText === "Add Pokemon") {
     console.log("clicked");
