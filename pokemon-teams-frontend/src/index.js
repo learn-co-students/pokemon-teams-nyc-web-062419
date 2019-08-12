@@ -46,9 +46,13 @@ function renderTrainers(trainer) {
     });
 }
 
-
+///////////////////////////
+//////main container target
 let mainContainer = document.querySelector("#main-container")
 
+
+//////////////////////////////
+//////DELETE fetch for Pokemon
 mainContainer.addEventListener("click", function(e){
     if (e.target.className === "release") {
         e.target.parentNode.remove()
@@ -59,6 +63,8 @@ mainContainer.addEventListener("click", function(e){
     }
 })
 
+//////////////////////////////////
+////////////POST fetch for Pokemon
 mainContainer.addEventListener("click", function(e){
     if (e.target.className === "new"){
         console.log(e.target.dataset.id)
