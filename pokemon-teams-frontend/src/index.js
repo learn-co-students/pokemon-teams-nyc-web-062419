@@ -63,6 +63,7 @@ function getTrainersPokemon(trainer) {
     const pokemonLi = makePokemonLi(pokemon)
     lis += pokemonLi
   })
+
   return lis
 }
 
