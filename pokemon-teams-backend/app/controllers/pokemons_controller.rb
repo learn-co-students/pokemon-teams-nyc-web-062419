@@ -1,5 +1,5 @@
 require 'faker'
-
+ 
 class PokemonsController < ApplicationController
   def create
     unless pokemon_params[:trainer_id].nil?
@@ -11,7 +11,7 @@ class PokemonsController < ApplicationController
         end
 
         if pokemon_params[:species].nil?
-          default[:species] = Faker::Pokemon.name
+          default[:species] = Faker::Games::Pokemon.name
         end
 
         @pokemon = Pokemon.create(pokemon_params.merge(default))
