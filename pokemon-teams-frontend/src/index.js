@@ -1,3 +1,7 @@
-const BASE_URL = "http://localhost:3000"
-const TRAINERS_URL = `${BASE_URL}/trainers`
-const POKEMONS_URL = `${BASE_URL}/pokemons`
+import { getTrainers } from "./api-calls.js";
+import { attachAllListeners } from "./event-listeners.js";
+
+window.addEventListener("DOMContentLoaded", e => {
+  getTrainers();
+  attachAllListeners();
+});

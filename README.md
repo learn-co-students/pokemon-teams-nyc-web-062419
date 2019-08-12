@@ -9,18 +9,22 @@ release one of their Pokemon first.
 ![Showing how the application runs from loading, adding Pokemon to a team and also releasing one](/pokemon-teams-frontend/assets/pokemon_teams.gif)
 
 ## Requirements
-- When a user loads the page, they should see all
-  trainers, with their current team of Pokemon.
+
+<!-- - When a user loads the page, they should see all
+  trainers, with their current team of Pokemon. -->
+
 - Whenever a user hits `Add Pokemon` and they have
   space on their team, they should get a new Pokemon.
-- Whenever a user hits `Release Pokemon` on a specific
-  Pokemon team, that specific Pokemon should be released from
-  the team.
+  <!-- - Whenever a user hits `Release Pokemon` on a specific
+    Pokemon team, that specific Pokemon should be released from
+    the team. -->
 
 ## Suggested HTML
+
 A Pokemon Card can be placed within the `<main>` tags.
 
 ### Pokemon Trainer Card
+
 ```
 <div class="card" data-id="1"><p>Prince</p>
   <button data-trainer-id="1">Add Pokemon</button>
@@ -35,7 +39,8 @@ A Pokemon Card can be placed within the `<main>` tags.
 ```
 
 ## API
-We are going to be using a Rails backend to support our requests. In order to have this working, 
+
+We are going to be using a Rails backend to support our requests. In order to have this working,
 you want to make sure you go to your Terminal and run the following code below:
 
     $ cd pokemon-teams-backend # Change into the directory
@@ -49,6 +54,7 @@ make it to `http://localhost:3000` as the base url. The documentation below shou
 to utilize every API endpoint necessary to build the application.
 
 ### Getting All Trainers and their Pokemon
+
 ```
 #=> Example Request
 GET /trainers
@@ -79,6 +85,7 @@ GET /trainers
 ```
 
 ### Adding a Pokemon
+
 ```
 #=> Example Request
 POST /pokemons
@@ -103,6 +110,7 @@ Required Body:
 ```
 
 ### Releasing a Pokemon
+
 ```
 #=> Example Request
 DELETE /pokemons/:pokemon_id
