@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stympy/faker.git
+  revision: 7d37acf5ae1bbfa5a25ccea785ebcdfb0be0f377
+  branch: master
+  specs:
+    faker (2.1.2)
+      i18n (>= 0.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -51,8 +59,6 @@ GEM
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     erubi (1.7.1)
-    faker (1.8.7)
-      i18n (>= 0.7)
     ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -135,7 +141,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   byebug
-  faker
+  faker!
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)
   rack-cors
@@ -146,4 +152,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
